@@ -8,7 +8,7 @@
     content: '';
     display: block;
     padding-top: 9rem;
-    background: #ddd url('/images/banner.jpg') no-repeat 50% / cover;
+    background: #FFFCF3 url('/images/base/familytalktw-logo.jpg') no-repeat 50% / cover;
 
     @include bp('s+') {
       background-size: contain;
