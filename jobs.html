@@ -1,0 +1,65 @@
+---
+title: 徵才職缺
+---
+
+<div>
+    <h3 class="text-center">
+        <a href="https://github.com/f2etw/jobs/issues">如果你也想要徵才/求職，歡迎張貼！</a>
+    </h3>
+
+    <hr>
+
+    <noscript>
+        <div>
+            <h3>您的瀏覽器可能不支援「顯示職缺」的功能</h3>
+            <p style="font-size:1em;">
+                請使用最新版的 Firefox 或是 Chrome 以便獲得最佳體驗。
+                或者，您可以點擊上方標題前往 GitHub 查看當前職缺。
+            </p>
+        </div>
+    </noscript>
+
+    <ul class="jobs js-jobs posts">
+            <a class="job__link" href="https://facebook.com/10153285570810982"></a>
+            <time class="job__createtime"></time>
+            <ul class="job__tags ul-reset">
+                <li class="job__tags__item"></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+
+<script>
+    fetch('https://api.github.com/repos/f2etw/jobs/issues').then(function(response) {
+      return response.json();
+    })
+    .then(function (jobs) {
+        var content = '';
+
+        jobs.forEach(function(job, index, array) {
+            if (job.pull_request !== undefined){return;}
+            content += `
+                <li class="job">
+                    <a class="job__link" href="${job.html_url}">${job.title}</a>
+                    <time class="job__createtime">${job.created_at}</time>
+                    <ul class="job__tags ul-reset">
+                        ${job.labels.map(
+                            function(label){
+                                return `<li class="job__tags__item" style="background:linear-gradient(#${label.color}, #${label.color});"><span>${label.name}</span></li>`
+                            }).join("\n")}
+                    </ul>
+                </li>
+            `;
+        });
+        return content;
+
+    })
+    .catch(function (content) {
+      return "<p>請點選上方連結以觀看徵才訊息！</p>";
+    })
+    .then(function (content) {
+        document.querySelector('.js-jobs').innerHTML += content;
+    });
+</script>

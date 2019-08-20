@@ -1,0 +1,28 @@
+exclude: [src, build, node_modules, Gruntfile.js, metalsmith.json, package.json, .travis.yml, README.md, gulpfile.js, export]
+collections:
+  activities:
+    output: true
+  members:
+    output: true
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "activities"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "members"
+    values:
+      layout: "member"

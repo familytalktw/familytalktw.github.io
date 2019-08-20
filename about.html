@@ -1,0 +1,66 @@
+---
+title: 關於我們
+---
+
+<div class="intro">
+
+	<ul class="community ul-reset text-center">
+		<li class="community__item">
+			<a class="community__link" href="https://www.facebook.com/groups/f2e.tw">
+				<span class="community__cover" style="background-position: 50% 0; background-image: url('https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/s720x720/11891894_886287831419653_2265712281735358894_o.jpg');">
+						<span class="community__name">Front-End Developers Taiwan</span>
+				</span>
+				<!-- <span class="community__desc">這是 F2ETW 的 facebook 社團，歡迎加入社群！可以在這徵才、詢問問題，讓前端在臺灣更加成熟！</span> -->
+			</a>
+		</li>
+	</ul>
+
+	<hr>
+
+	<p>
+		希望前端能夠成為台灣一個成熟的產業!
+
+		主要討論: 前端網頁技術，使用者介面探討，網頁設計。
+
+		HTML，CSS，JavaScript等語言技術討論，瀏覽器開發工具。
+
+		iOS, Android 等 Mobile App 使用者介面相關議題討論。
+
+		也歡迎前端經驗分享，以及企業徵才。
+
+		若您對 Front-End Developers Taiwan 有興趣，歡迎與我們聯繫。
+	</p>
+
+	<p>
+		We dedicate ourselves in promoting front-end technology in Taiwan.
+
+		Focusing on web technology, user interface, and web design.
+
+		Programming language discussion - HTML, CSS and JavaScript, or browser development tools.
+
+		View source discussion of mobile app such as iOS, Android .
+
+		We also welcome you to share front-end experience and recruiting information with us.
+	</p>
+</div>
+
+{% if site.members != empty %}
+<div class="members-wrap">
+	<ul class="members text-center ul-reset">
+		{% assign members = site.members | sort:"order"  %}
+		{% for member in members %}
+		<li class="member">
+			<a class="member__link" href="{{ member.url}}">
+				<img class="member__avatar bd-round" src="{{ member.avatar }}" alt="{{ member.name }}" width="100" height="100" />
+				<span class="member__info">
+					<strong class="member__name">{{ member.name }}</strong>
+					<span class="member__title">{{ member.title }}</span>
+				</span>
+			</a>
+		</li>
+		{% endfor %}
+		<li class="member m--empty"></li>
+		<li class="member m--empty"></li>
+	</ul>
+</div>
+{% endif %}

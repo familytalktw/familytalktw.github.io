@@ -1,0 +1,34 @@
+---
+title: party 16
+data:
+    - name: 撥款入帳金額
+      category: 票務
+      unitPrice: 14536
+      number: 1
+      total: 14536
+      note:
+
+    - name: 場地費
+      category: 雜項
+      unitPrice: -5400
+      number: 1
+      total: -5400
+      note:
+
+    - name: 講師費（主講）
+      category: 雜項
+      unitPrice: -1600
+      number: 2
+      total: -3200
+      note:
+
+    - name: 講師費（短講）
+      category: 雜項
+      unitPrice: -500
+      number: 1
+      total: -500
+      note:
+
+total: 5436
+property: 36604
+balance: 42040

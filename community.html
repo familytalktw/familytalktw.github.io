@@ -1,0 +1,18 @@
+---
+title: 社群串連
+---
+
+<ul class="community text-center ul-reset">
+    {% for community in site.data.community %}
+    <li class="community__item">
+        <a class="community__link" href="https://www.facebook.com/groups/{{ community.id }}">
+            <span class="community__cover" style="background-image: url('{{ community.cover.source }}');">
+                <span class="community__name">{{ community.name }}</span>
+            </span>
+            <span class="community__desc">{{ community.description }}</span>
+        </a>
+    </li>
+    {% endfor %}
+
+    <li class="community__item m--empty"></li>
+</ul>
