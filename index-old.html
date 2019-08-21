@@ -1,0 +1,105 @@
+---
+title: Home
+---
+
+<div class="home">
+
+  <ul class="community ul-reset text-center">
+    <li class="community__item">
+      <a class="community__link" href="https://github.com/f2etw/f2etw.github.io">
+        <span class="community__cover" style="background-position: 25% 50%, 80% 50%; background-size: contain, 35%; background-image: url('https://avatars2.githubusercontent.com/u/8252114'), url('https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png');">
+            <span class="community__name">f2etw.github.io @ GitHub</span>
+        </span>
+        <span class="community__desc">這是本網站的 Github，若你對這個網站有任何意見、想法，我們隨時歡迎你的貢獻 &amp; PR！</span>
+      </a>
+    </li>
+  </ul>
+
+  <br>
+
+  {% if site.posts != empty %}
+  <ul class="activity ul-reset" style="max-width: 70%">
+    {% for post in site.posts %}
+      <li class="activity-item">
+        <a class="activity-link" href="{{ post.url}}">
+          <time class="activity-time">{{ post.date | date: "%Y-%m-%d" }}</time>
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h2 class="text-center"><img src="/images/facebook.svg" alt="facebook icon"> Front-End Developers Taiwan 社群動態</h2>
+
+  <ul class="community ul-reset text-center">
+    <li class="community__item">
+      <a class="community__link" href="https://www.facebook.com/groups/f2e.tw">
+        <span class="community__cover" style="background-position: 50% 0; background-image: url('https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/s720x720/11891894_886287831419653_2265712281735358894_o.jpg');">
+            <span class="community__name">Front-End Developers Taiwan</span>
+        </span>
+        <span class="community__desc">這是 F2ETW 的 facebook 社團，歡迎加入社群！可以在這徵才、詢問問題，讓前端在臺灣更加成熟！</span>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="posts ul-reset"></ul>
+
+  <script>
+  fetch('https://graph.facebook.com/521085554595481/feed?access_token=1385521591772831|lMcuWxJls6aEK-IwR0Z-_AQVMV4').then(function(response) {
+    return response.json();
+  })
+  .then(function(posts) {
+
+    console.log(posts,0);
+
+    var content = [];
+    var msg;
+    var removeUnsafeChar = function (str) {
+      str = str.toString();
+      return str.replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+    };
+
+    posts.data.map(function(post, index, array) {
+      post.name = post.name || '';
+      post.from.name = post.from.name || '';
+
+      var _html = '';
+
+      if (post.message) {
+        msg = post.message || '';
+        msg = removeUnsafeChar(post.message);
+
+        _html += `
+          <li class="post">
+            <a href="https://facebook.com/${post.from.id}"><img src="https://graph.facebook.com/${post.from.id}/picture?width=60&height=60" title="${post.from.name}" alt="${post.from.name}" class="post__avatar" /></a>
+            <div class="post__content">`
+
+        if(msg) {
+          _html += `<a class="post__msg" href="https://facebook.com/${post.id}">${msg}</a>`
+        }
+
+        if(post.link && post.picture) {
+          _html += `<div class="post__preview"><a class="post__preview__link" href="${post.link}" class="link"><img class="post__preview__img" src="${post.picture}" alt=""/>${post.name}</a></div>`
+        }
+
+        _html += `</div></li>`;
+      }
+
+      content.push(_html);
+    });
+
+    return content;
+  })
+  .catch(function(err) {
+    return "<p>請點選上方社團連結以觀看社團貼文！</p>";
+  }).then(function (content) {
+    document.querySelector('.posts').innerHTML = content.join('');
+  });
+  </script>
+
+</div>
