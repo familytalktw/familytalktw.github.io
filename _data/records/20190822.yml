@@ -31,7 +31,7 @@ data:
       note: 
 
 
-   - name: 發票 5% 税 
+    - name: 發票 5% 税 
       category: 税
       unitPrice: 11
       number: 22
@@ -46,7 +46,7 @@ data:
       total: 
       note: Ginger 捐贈
 
-   - name: 退款
+    - name: 退款
       category: 退款
       unitPrice: 202
       number: 1
