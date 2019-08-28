@@ -1,0 +1,74 @@
+---
+title: 2019-08-22
+data:
+    - name: 撥款入帳金額
+      category: 票務
+      unitPrice: 230
+      number: 22
+      total: 5060
+      note: 
+
+    - name: 現場收入
+      category: 票務
+      unitPrice: 0
+      number: 0
+      total: 0
+      note: 
+
+
+    - name: KKTIX
+      category: KK 代收手續費
+      unitPrice: -299
+      number: 
+      total: -299
+      note:
+
+    - name: KKTIX
+      category: 轉帳手續費
+      unitPrice: -30
+      number: 
+      total: -30
+      note: 
+
+小記 4731
+
+   - name: 發票 5% 税 
+      category: 税
+      unitPrice: 11
+      number: 22
+      total:  -242
+      note: 219*5%*22
+
+
+    - name: 講師費
+      category: 講師費
+      unitPrice: 1500
+      number: 1
+      total: 
+      note: Ginger 捐贈
+
+   - name: 退款
+      category: 退款
+      unitPrice: 202
+      number: 1
+      total: -202
+      note: 退款
+
+
+
+    - name: 食物pizza
+      category: 雜項
+      unitPrice: 2018
+      number: 1
+      total: -2018
+      note:
+
+
+
+
+
+
+
+total: 2268
+property: 0
+balance: 2299
