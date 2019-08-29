@@ -30,6 +30,12 @@ data:
       total: -30
       note: 
 
+    - name: KKTIX
+      category: 收費活動開通費用
+      unitPrice: -800
+      number: 
+      total: -800
+      note: 
 
     - name: 發票 5% 税 
       category: 税
@@ -68,6 +74,6 @@ data:
 
 
 
-total: 2268
+total: 1468
 property: 0
-balance: 2299
+balance: 1468
