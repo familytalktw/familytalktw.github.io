@@ -1,0 +1,21 @@
+---
+title: 2019-09-25
+data:
+    - name: ginger 借款
+      category: 借款
+      unitPrice: 5000
+      number: 1
+      total: 5000
+      note: 
+
+    - name: 對騎銀行數字
+      category: 調整
+      unitPrice: -29
+      number: 1
+      total: -29
+      note: 
+
+
+total: 4971
+property: -1318
+balance: 3653

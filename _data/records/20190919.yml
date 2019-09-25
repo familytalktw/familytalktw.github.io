@@ -1,0 +1,76 @@
+---
+title: 2019-08-22
+data:
+    - name: 撥款入帳金額
+      category: 票務
+      unitPrice: 230
+      number: 12
+      total: 2760
+      note: 
+
+    - name: 現場收入
+      category: 票務
+      unitPrice: 2
+      number: 230
+      total: 460
+      note: 
+
+    - name: KKTIX
+      category: KK 代收手續費
+      unitPrice: -156
+      number: 
+      total: -156
+      note:
+
+    - name: KKTIX
+      category: 轉帳手續費
+      unitPrice: -30
+      number: 
+      total: -30
+      note: 
+
+    - name: KKTIX
+      category: 收費活動開通費用
+      unitPrice: -800
+      number: 
+      total: -800
+      note: 
+
+    - name: 發票 5% 税 
+      category: 税
+      unitPrice: 11
+      number: 12
+      total:  -132
+      note: 219*5%*12
+
+
+    - name: 講師費
+      category: 講師費
+      unitPrice: 1500
+      number: 2
+      total: 
+      note: -3000
+
+- name: 講師費手續費
+      category: 講師費
+      unitPrice: 15
+      number: 2
+      total: 
+      note: -30
+
+    - name: 食物pizza
+      category: 雜項
+      unitPrice: 1888
+      number: 1
+      total: -1888
+      note:
+
+
+
+
+
+
+
+total: -2786
+property: 1468 
+balance: -1318
