@@ -1,5 +1,5 @@
 ---
-title: 2019-08-22
+title: 2019-09-19
 data:
     - name: 撥款入帳金額
       category: 票務
@@ -51,7 +51,7 @@ data:
       total: 
       note: -3000
 
-- name: 講師費手續費
+    - name: 講師費手續費
       category: 講師費
       unitPrice: 15
       number: 2
