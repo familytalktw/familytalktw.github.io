@@ -1,11 +1,11 @@
 ---
-title: 2019-10-25
+title: 2019-11-28
 data:
     - name: 撥款入帳金額
       category: 票務
       unitPrice: 250
-      number: 8
-      total: 2000
+      number: 10
+      total: 2500
       note: 
 
 
@@ -24,29 +24,41 @@ data:
       total: -30
       note: 
 
+    - name: KKTIX
+      category: 金流手續費
+      unitPrice: -15
+      number: 10
+      total: -150
+      note: 
+
+    - name: KKTIX
+      category: 抵稅
+      unitPrice: 42
+      number: 1
+      total: 42
+      note: 
 
     - name: 發票 5% 税 
       category: 税
       unitPrice: 13
-      number: 8
-      total:  -100
-      note: 250*5%*13
+      number: 10
+      total:  -130
+      note: 250*5%
 
 
     - name: 講師費
       category: 講師費
-      unitPrice: 0
-      number: 2
+      unitPrice: 1
+      number: 1600
       total: 
-      note: 巫彥德 & Scott 捐贈
-
+      note: 
   
 
     - name: 食物pizza
       category: 雜項
-      unitPrice: 1000
+      unitPrice: 964
       number: 1
-      total: -1000
+      total: -964
       note:
 
 
@@ -55,6 +67,6 @@ data:
 
 
 
-total: -588
-property: 3653 
-balance:  3065
+total: -1132
+property: 3065 
+balance:  1933
