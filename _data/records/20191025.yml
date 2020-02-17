@@ -3,13 +3,19 @@ title: 2019-10-25
 data:
     - name: 撥款入帳金額
       category: 票務
-      unitPrice: 230
+      unitPrice: 250
       number: 8
       total: 2000
       note: 
 
 
-  
+    - name: KKTIX
+      category: 收費活動開通費用
+      unitPrice: -800
+      number: 
+      total: -800
+      note: 
+
 
     - name: KKTIX
       category: 轉帳手續費
@@ -18,12 +24,6 @@ data:
       total: -30
       note: 
 
-    - name: KKTIX
-      category: 收費活動開通費用
-      unitPrice: -800
-      number: 
-      total: -800
-      note: 
 
     - name: 發票 5% 税 
       category: 税
@@ -55,6 +55,6 @@ data:
 
 
 
-total: -3653
-property: 210 
-balance: -3863
+total: -588
+property: 3653 
+balance: -3065
